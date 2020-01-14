@@ -10,6 +10,14 @@
     },
     {
       "method": "GET",
+      "path": "/scrap_categories/:site",
+      "handler": "article.catScraping",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/scraping/:site/:limit",
       "handler": "article.scraping",
       "config": {
