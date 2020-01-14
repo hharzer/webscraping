@@ -13,13 +13,14 @@
       "type": "string",
       "unique": true
     },
-    "categories": {
+    "category_parent": {
       "collection": "category",
-      "via": "category"
+      "via": "category_child",
+      "dominant": true
     },
-    "category": {
-      "model": "category",
-      "via": "categories"
+    "category_child": {
+      "collection": "category",
+      "via": "category_parent"
     },
     "site": {
       "model": "site",
