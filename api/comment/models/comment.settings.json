@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "comments",
+  "info": {
+    "name": "comment"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "author": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "vote": {
+      "type": "integer"
+    },
+    "article": {
+      "via": "comments",
+      "model": "article"
+    }
+  }
+}

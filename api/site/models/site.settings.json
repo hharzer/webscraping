@@ -1,0 +1,43 @@
+{
+  "connection": "default",
+  "collectionName": "sites",
+  "info": {
+    "name": "site"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "stop",
+        "start",
+        "finish",
+        "failed"
+      ]
+    },
+    "scrap": {
+      "type": "enumeration",
+      "enum": [
+        "previous",
+        "continue"
+      ]
+    },
+    "metadatum": {
+      "via": "site",
+      "model": "metadata"
+    },
+    "categories": {
+      "via": "site",
+      "collection": "category"
+    }
+  }
+}

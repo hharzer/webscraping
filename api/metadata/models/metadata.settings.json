@@ -1,0 +1,66 @@
+{
+  "connection": "default",
+  "collectionName": "metadata",
+  "info": {
+    "name": "metadata"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "site": {
+      "model": "site",
+      "via": "metadatum"
+    },
+    "pagination_item": {
+      "type": "string"
+    },
+    "page_text": {
+      "type": "string"
+    },
+    "page_author": {
+      "type": "string"
+    },
+    "page_featured": {
+      "type": "string"
+    },
+    "page_images": {
+      "type": "string"
+    },
+    "page_videos": {
+      "type": "string"
+    },
+    "page_date": {
+      "type": "string"
+    },
+    "comment_author": {
+      "type": "string"
+    },
+    "comment_text": {
+      "type": "string"
+    },
+    "comment_date": {
+      "type": "string"
+    },
+    "comment_vote": {
+      "type": "string"
+    },
+    "menu_item": {
+      "type": "string"
+    },
+    "pagination_type": {
+      "type": "enumeration",
+      "enum": [
+        "next",
+        "load"
+      ]
+    },
+    "pagination_next": {
+      "type": "string"
+    }
+  }
+}

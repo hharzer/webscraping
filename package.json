@@ -1,0 +1,43 @@
+{
+  "name": "web-scraping",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "async": "^3.1.0",
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "crawler": "^1.2.1",
+    "request-promise": "^4.2.5",
+    "request-promise-native": "^1.0.8",
+    "strapi": "3.0.0-beta.18.3",
+    "strapi-admin": "3.0.0-beta.18.3",
+    "strapi-connector-mongoose": "3.0.0-beta.18.3",
+    "strapi-hook-bookshelf": "^3.0.0-beta.17.8",
+    "strapi-plugin-content-manager": "3.0.0-beta.18.3",
+    "strapi-plugin-content-type-builder": "3.0.0-beta.18.3",
+    "strapi-plugin-email": "3.0.0-beta.18.3",
+    "strapi-plugin-graphql": "3.0.0-beta.18.3",
+    "strapi-plugin-upload": "3.0.0-beta.18.3",
+    "strapi-plugin-users-permissions": "3.0.0-beta.18.3",
+    "strapi-utils": "3.0.0-beta.18.3"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "67fa2a9e-31c0-4fcf-95cd-282042821a2a"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

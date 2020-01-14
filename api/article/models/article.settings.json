@@ -1,0 +1,70 @@
+{
+  "connection": "default",
+  "collectionName": "articles",
+  "info": {
+    "name": "article"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "content": {
+      "type": "text"
+    },
+    "author": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "images": {
+      "type": "array"
+    },
+    "videos": {
+      "type": "array"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "comments": {
+      "collection": "comment",
+      "via": "article"
+    },
+    "link": {
+      "type": "string"
+    },
+    "page": {
+      "type": "string"
+    },
+    "class": {
+      "type": "enumeration",
+      "enum": [
+        "neutral",
+        "positive",
+        "negative"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "start",
+        "failed",
+        "stop",
+        "finish"
+      ]
+    },
+    "category": {
+      "via": "articles",
+      "model": "category"
+    }
+  }
+}
