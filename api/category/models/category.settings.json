@@ -13,15 +13,6 @@
       "type": "string",
       "unique": true
     },
-    "category_parent": {
-      "collection": "category",
-      "via": "category_child",
-      "dominant": true
-    },
-    "category_child": {
-      "collection": "category",
-      "via": "category_parent"
-    },
     "site": {
       "model": "site",
       "via": "categories"
@@ -38,6 +29,14 @@
     },
     "color": {
       "type": "string"
+    },
+    "category_parent": {
+      "model": "category",
+      "via": "category_child"
+    },
+    "category_child": {
+      "collection": "category",
+      "via": "category_parent"
     }
   }
 }

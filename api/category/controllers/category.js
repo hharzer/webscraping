@@ -7,6 +7,6 @@
 
 module.exports = {
     find(){
-        return strapi.query('category').find({},['category_parent','category_child']);
+        return strapi.query('category').find({},['category_child']);
     }
 };
