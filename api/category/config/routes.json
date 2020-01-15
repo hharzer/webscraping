@@ -2,6 +2,22 @@
   "routes": [
     {
       "method": "GET",
+      "path": "/parentcat",
+      "handler": "category.findParent",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/findstories",
+      "handler": "category.findStories",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/categories",
       "handler": "category.find",
       "config": {
@@ -10,16 +26,16 @@
     },
     {
       "method": "GET",
-      "path": "/categories/count",
-      "handler": "category.count",
+      "path": "/categories/:id",
+      "handler": "category.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/categories/:id",
-      "handler": "category.findOne",
+      "path": "/categories/count",
+      "handler": "category.count",
       "config": {
         "policies": []
       }

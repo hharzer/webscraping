@@ -21,9 +21,10 @@
     "vote": {
       "type": "integer"
     },
-    "article": {
+    "categories": {
+      "collection": "category",
       "via": "comments",
-      "model": "article"
+      "dominant": true
     }
   }
 }

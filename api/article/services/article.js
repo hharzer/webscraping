@@ -4,11 +4,25 @@ const request = require('request-promise');
 const cheerio = require('cheerio');
 
 module.exports = {
-    async find (_start, _limit) {
-        return await strapi.query('article').find({_start, _limit, status: 'finish'});
+    async findNews (id, _start, _limit) {
+        return await strapi.query('article').model
+        .find({ categories: {$in : [id]}, status: 'finish'})
+        .limit(parseInt(_limit))
+        .skip(parseInt(_start));
     },
     async featured (id) {
-        return await strapi.query('article').findOne({category: id});
+        return await strapi.query('article').model
+        .findOne({categories: {$in : [id]}});
+    },
+    async search (text, _limit) {
+        console.log(text);  
+        return await strapi.query('article').model
+        .find({$or: [
+            {title: { $regex: text, $options: "i" }},
+            {content: { $regex: text, $options: "i" }},
+            {author: { $regex: text, $options: "i" }}
+        ]})
+        .limit(parseInt(_limit))
     },
     /**                
     * 

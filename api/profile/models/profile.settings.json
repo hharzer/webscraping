@@ -1,0 +1,24 @@
+{
+  "info": {
+    "name": "profile"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "likes": {
+      "type": "integer"
+    },
+    "downloads": {
+      "type": "integer"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "profile"
+    }
+  },
+  "connection": "default",
+  "collectionName": "profiles"
+}

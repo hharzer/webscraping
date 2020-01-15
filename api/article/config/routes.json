@@ -2,6 +2,46 @@
   "routes": [
     {
       "method": "GET",
+      "path": "/search/:text/:_limit",
+      "handler": "article.search",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/articles/:id",
+      "handler": "article.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/articles/:id/:_start/:_limit",
+      "handler": "article.findNews",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/featured/:id",
+      "handler": "article.featured",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/articles/count",
+      "handler": "article.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/pagination/:site",
       "handler": "article.pgScraping",
       "config": {
@@ -20,38 +60,6 @@
       "method": "GET",
       "path": "/scraping/:site/:limit",
       "handler": "article.scraping",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/articles/:_start/:_limit",
-      "handler": "article.find",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/articles/count",
-      "handler": "article.count",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/featured/:id",
-      "handler": "article.featured",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/articles/:id",
-      "handler": "article.findOne",
       "config": {
         "policies": []
       }

@@ -14,6 +14,9 @@
       "unique": true,
       "required": true
     },
+    "important": {
+      "type": "boolean"
+    },
     "content": {
       "type": "text"
     },
@@ -34,10 +37,6 @@
     },
     "tags": {
       "type": "string"
-    },
-    "comments": {
-      "collection": "comment",
-      "via": "article"
     },
     "link": {
       "type": "string"
@@ -62,9 +61,10 @@
         "finish"
       ]
     },
-    "category": {
+    "categories": {
+      "collection": "category",
       "via": "articles",
-      "model": "category"
+      "dominant": true
     }
   }
 }

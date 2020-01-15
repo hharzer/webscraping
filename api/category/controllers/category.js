@@ -8,12 +8,28 @@
 module.exports = {
     find() {
         return strapi.query('category').model
-        .find()
+        .find({ categ_parents: [] })
         .populate({
-            path: 'categories',
+            path: 'categ_children',
+            select: 'name color',
             // Get friends of friends - populate the 'friends' array for every friend
-            populate: { path: 'categories' }
+            populate: { 
+                path: 'categ_children',
+                select: 'name color',
+            }
         })
-        .find({ category:  null })
+        .select('name color');
+    },
+    findParent() {
+        return strapi.query('category').model
+        .find({ categ_parents: [] })
+        .select('name color');
+    },
+    findStories(){
+        return strapi.query('category').model
+        .find({ name: 'Stories' })
+        .populate({
+            path: 'articles',
+        })
     }
 };

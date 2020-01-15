@@ -23,20 +23,8 @@
     "pagination": {
       "type": "string"
     },
-    "articles": {
-      "collection": "article",
-      "via": "category"
-    },
     "color": {
       "type": "string"
-    },
-    "category": {
-      "model": "category",
-      "via": "categories"
-    },
-    "categories": {
-      "collection": "category",
-      "via": "category"
     },
     "type": {
       "type": "enumeration",
@@ -45,6 +33,23 @@
         "subroot",
         "child"
       ]
+    },
+    "categ_parents": {
+      "collection": "category",
+      "via": "categ_children",
+      "dominant": true
+    },
+    "categ_children": {
+      "collection": "category",
+      "via": "categ_parents"
+    },
+    "articles": {
+      "via": "categories",
+      "collection": "article"
+    },
+    "comments": {
+      "via": "categories",
+      "collection": "comment"
     }
   }
 }
