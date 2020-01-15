@@ -30,13 +30,21 @@
     "color": {
       "type": "string"
     },
-    "category_parent": {
+    "category": {
       "model": "category",
-      "via": "category_child"
+      "via": "categories"
     },
-    "category_child": {
+    "categories": {
       "collection": "category",
-      "via": "category_parent"
+      "via": "category"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "root",
+        "subroot",
+        "child"
+      ]
     }
   }
 }
