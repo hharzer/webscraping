@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "profiles",
   "info": {
     "name": "profile"
   },
@@ -7,18 +9,22 @@
     "timestamps": true
   },
   "attributes": {
-    "likes": {
-      "type": "integer"
-    },
-    "downloads": {
-      "type": "integer"
-    },
     "user": {
       "plugin": "users-permissions",
       "model": "user",
       "via": "profile"
+    },
+    "likes": {
+      "collection": "article"
+    },
+    "downloads": {
+      "collection": "article"
+    },
+    "shares": {
+      "collection": "article"
+    },
+    "picture": {
+      "type": "richtext"
     }
-  },
-  "connection": "default",
-  "collectionName": "profiles"
+  }
 }
